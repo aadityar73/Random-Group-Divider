@@ -16,7 +16,7 @@ import java.util.*;
 
 public class Home extends AppCompatActivity {
 
-    EditText namesInp;
+    EditText namesInp, numGroupsInp;
     Button assignBtn;
     TextView outputText;
 
@@ -32,12 +32,31 @@ public class Home extends AppCompatActivity {
         });
 
         namesInp = findViewById(R.id.namesInp);
+        numGroupsInp = findViewById(R.id.numGroupsInp);
         assignBtn = findViewById(R.id.assignBtn);
         outputText = findViewById(R.id.output);
 
         assignBtn.setOnClickListener(view -> {
-            Toast.makeText(this, "Work in Progress!", Toast.LENGTH_SHORT).show();
-        });
 
+            if(namesInp.getText().toString().isEmpty() || numGroupsInp.getText().toString().isEmpty()){
+                Toast.makeText(this, "Please fill all the fields!", Toast.LENGTH_SHORT).show();
+            } else{
+
+                List<String> names = new ArrayList<>();
+                Map<Integer, String> groups = new HashMap<>();
+
+                for(String name : namesInp.getText().toString().split(" ")){
+                    names.add(name);
+                }
+
+                int randomNamesNum = (int)(Math.random() * names.size()) + 1;
+                int randomGroupNum = (int) (Math.random() * Integer.parseInt(numGroupsInp.getText().toString())) + 1;
+
+                groups.put(randomGroupNum, names.get(randomNamesNum));
+                names.remove(randomNamesNum);
+
+                Toast.makeText(this, "Groups: " + groups + ", Names: " + names, Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 }
