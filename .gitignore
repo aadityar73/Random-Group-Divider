@@ -1,15 +1,47 @@
+# --- Android Studio & IntelliJ ---
+.idea/
 *.iml
-.gradle
-/local.properties
-/.idea/caches
-/.idea/libraries
-/.idea/modules.xml
-/.idea/workspace.xml
-/.idea/navEditor.xml
-/.idea/assetWizardSettings.xml
-.DS_Store
-/build
-/captures
-.externalNativeBuild
-.cxx
+*.iws
+*.ipr
+captures/
+.navigation/
+
+# --- Gradle ---
+.gradle/
+**/build/
+
+# --- Local Configuration ---
 local.properties
+
+# --- Built Files ---
+*.apk
+*.aar
+*.ap_
+*.aab
+*.dex
+*.class
+
+# --- Keystores (Never Commit!) ---
+*.jks
+*.keystore
+
+# --- OS-Specific Files ---
+.DS_Store
+Thumbs.db
+
+# --- Logs & Temp Files ---
+*.log
+*.tmp
+
+# --- Firebase/Google Services (if auto-generated) ---
+google-services.json.orig
+
+# --- Fastlane (if used) ---
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/
+fastlane/test_output/
+
+# --- NDK/C++ ---
+.externalNativeBuild/
+.cxx/
