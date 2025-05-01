@@ -43,19 +43,40 @@ public class Home extends AppCompatActivity {
             } else{
 
                 List<String> names = new ArrayList<>();
-                Map<Integer, String> groups = new HashMap<>();
+                Map<Integer, List<String>> groups = new HashMap<>();
+
+                int numGroups = Integer.parseInt(numGroupsInp.getText().toString());
 
                 for(String name : namesInp.getText().toString().split(" ")){
                     names.add(name);
                 }
 
-                int randomNamesNum = (int)(Math.random() * names.size()) + 1;
-                int randomGroupNum = (int) (Math.random() * Integer.parseInt(numGroupsInp.getText().toString())) + 1;
+                if(numGroups > names.size()){
+                    Toast.makeText(this, "The number of groups cannot exceed the number of names", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                if(numGroups <= 0){
+                    Toast.makeText(this, "Number of groups must be at least 1", Toast.LENGTH_SHORT).show();
+                    return;
+                }
 
-                groups.put(randomGroupNum, names.get(randomNamesNum));
-                names.remove(randomNamesNum);
+                int maxGroupSize = names.size() / numGroups;
 
-                Toast.makeText(this, "Groups: " + groups + ", Names: " + names, Toast.LENGTH_SHORT).show();
+                for(int i = 1; i <= numGroups; i++){
+                    groups.put(i, new ArrayList<>());
+                }
+
+                while(!names.isEmpty()){
+                    int randomNamesNum = (int)(Math.random() * names.size());
+                    int randomGroupNum = (int) (Math.random() * numGroups) + 1;
+
+                    if(groups.get(randomGroupNum).size() < maxGroupSize){
+                        groups.get(randomGroupNum).add(names.get(randomNamesNum));
+                        names.remove(randomNamesNum);
+                    }
+                }
+
+                Toast.makeText(this, "Groups: " + groups + ", Names: " + names, Toast.LENGTH_LONG).show();
             }
         });
     }
