@@ -60,14 +60,14 @@ public class Home extends AppCompatActivity {
                     return;
                 }
 
-                int maxGroupSize = names.size() / numGroups;
+                int maxGroupSize = (int) (Math.ceil((double)names.size() / numGroups));
 
                 for(int i = 1; i <= numGroups; i++){
                     groups.put(i, new ArrayList<>());
                 }
 
                 while(!names.isEmpty()){
-                    int randomNamesNum = (int)(Math.random() * names.size());
+                    int randomNamesNum = (int) (Math.random() * names.size());
                     int randomGroupNum = (int) (Math.random() * numGroups) + 1;
 
                     if(groups.get(randomGroupNum).size() < maxGroupSize){
