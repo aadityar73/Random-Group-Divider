@@ -78,7 +78,13 @@ public class Home extends AppCompatActivity {
                     }
                 }
 
-                Toast.makeText(this, "Groups: " + groups + ", Names: " + names, Toast.LENGTH_LONG).show();
+                StringBuilder output =  new StringBuilder();
+
+                for(Integer i : groups.keySet()){
+                    output.append("Group ").append(i).append(": ").append(groups.get(i)).append("\n");
+                }
+
+                outputText.setText(output.toString());
             }
         });
     }
