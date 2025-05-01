@@ -47,8 +47,10 @@ public class Home extends AppCompatActivity {
 
                 int numGroups = Integer.parseInt(numGroupsInp.getText().toString());
 
-                for(String name : namesInp.getText().toString().split(" ")){
-                    names.add(name);
+                for(String name : namesInp.getText().toString().split("\\s+")){
+                    if(!name.isEmpty()){
+                        names.add(name);
+                    }
                 }
 
                 if(numGroups > names.size()){
