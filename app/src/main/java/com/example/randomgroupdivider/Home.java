@@ -11,6 +11,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.LinearLayoutManager;
 
 import java.util.*;
 
@@ -18,7 +20,7 @@ public class Home extends AppCompatActivity {
 
     EditText namesInp, numGroupsInp;
     Button assignBtn;
-    TextView outputText;
+    RecyclerView recyclerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +36,9 @@ public class Home extends AppCompatActivity {
         namesInp = findViewById(R.id.namesInp);
         numGroupsInp = findViewById(R.id.numGroupsInp);
         assignBtn = findViewById(R.id.assignBtn);
-        outputText = findViewById(R.id.output);
+
+        recyclerView = findViewById(R.id.groupsRecyclerView);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         assignBtn.setOnClickListener(view -> {
 
@@ -78,13 +82,13 @@ public class Home extends AppCompatActivity {
                     }
                 }
 
-                StringBuilder output =  new StringBuilder();
-
-                for(Integer i : groups.keySet()){
-                    output.append("Group ").append(i).append(": ").append(groups.get(i)).append("\n");
+                List<GroupItem> groupItems = new ArrayList<>();
+                for (Integer i : groups.keySet()) {
+                    groupItems.add(new GroupItem("Group " + i, groups.get(i)));
                 }
 
-                outputText.setText(output.toString());
+                GroupAdapter adapter = new GroupAdapter(groupItems);
+                recyclerView.setAdapter(adapter);
             }
         });
     }
