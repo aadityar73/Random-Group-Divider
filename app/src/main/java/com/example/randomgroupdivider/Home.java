@@ -1,5 +1,6 @@
 package com.example.randomgroupdivider;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
@@ -8,6 +9,7 @@ import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.PopupMenu;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -18,9 +20,7 @@ import java.util.*;
 
 public class Home extends AppCompatActivity {
 
-    EditText namesInp, numGroupsInp;
-    Button assignBtn;
-    RecyclerView recyclerView;
+    Button groupDividerBtn, numGeneratorBtn, sessionsBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,63 +33,70 @@ public class Home extends AppCompatActivity {
             return insets;
         });
 
-        namesInp = findViewById(R.id.namesInp);
-        numGroupsInp = findViewById(R.id.numGroupsInp);
-        assignBtn = findViewById(R.id.assignBtn);
+        groupDividerBtn = findViewById(R.id.groupDividerBtn);
+        numGeneratorBtn = findViewById(R.id.numGeneratorBtn);
+        sessionsBtn = findViewById(R.id.sessionsBtn);
 
-        recyclerView = findViewById(R.id.groupsRecyclerView);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        groupDividerBtn.setOnClickListener(view -> {
+            Intent groupDividerActivity = new Intent(Home.this, GroupDivider.class);
+            startActivity(groupDividerActivity);
+        });
 
-        assignBtn.setOnClickListener(view -> {
+        numGeneratorBtn.setOnClickListener(view -> {
+            Intent numGeneratorActivity = new Intent(Home.this, NumGenerator.class);
+            startActivity(numGeneratorActivity);
+        });
 
-            if(namesInp.getText().toString().isEmpty() || numGroupsInp.getText().toString().isEmpty()){
-                Toast.makeText(this, "Please fill all the fields!", Toast.LENGTH_SHORT).show();
-            } else{
+        sessionsBtn.setOnClickListener(view -> {
+            PopupMenu popupMenu = new PopupMenu(Home.this, sessionsBtn);
 
-                List<String> names = new ArrayList<>();
-                Map<Integer, List<String>> groups = new HashMap<>();
+            popupMenu.getMenuInflater().inflate(R.menu.popup_menu, popupMenu.getMenu());
+            popupMenu.show();
 
-                int numGroups = Integer.parseInt(numGroupsInp.getText().toString());
+            popupMenu.setOnMenuItemClickListener(item -> {
+                int id = item.getItemId();
 
-                for(String name : namesInp.getText().toString().split("\\s+")){
-                    if(!name.isEmpty()){
-                        names.add(name);
-                    }
+                if (id == R.id.session_1) {
+                    startActivity(new Intent(this, Session1.class));
+                    return true;
+                } else if (id == R.id.session_2) {
+                    startActivity(new Intent(this, Session2.class));
+                    return true;
+                } else if (id == R.id.basic_calculator) {
+                    startActivity(new Intent(this, BasicCalculator.class));
+                    return true;
+                } else if (id == R.id.session_4_1) {
+                    startActivity(new Intent(this, Session4_1.class));
+                    return true;
+                } else if (id == R.id.email) {
+                    startActivity(new Intent(this, Email.class));
+                    return true;
+                } else if (id == R.id.wallpaper_call) {
+                    startActivity(new Intent(this, WallpaperCall.class));
+                    return true;
+                } else if (id == R.id.ui_controls_1) {
+                    startActivity(new Intent(this, UIControls_1.class));
+                    return true;
+                } else if (id == R.id.ui_controls_2) {
+                    startActivity(new Intent(this, UIControls_2.class));
+                    return true;
+                } else if (id == R.id.ui_controls_3) {
+                    startActivity(new Intent(this, UIControls_3.class));
+                    return true;
+                } else if (id == R.id.sqlite_db) {
+                    startActivity(new Intent(this, SqliteDb.class));
+                    return true;
+                } else if (id == R.id.string_array) {
+                    startActivity(new Intent(this, StringArray.class));
+                    return true;
+                } else if (id == R.id.context_menu) {
+                    startActivity(new Intent(this, ContextMenu.class));
+                    return true;
                 }
 
-                if(numGroups > names.size()){
-                    Toast.makeText(this, "The number of groups cannot exceed the number of names", Toast.LENGTH_SHORT).show();
-                    return;
-                }
-                if(numGroups <= 0){
-                    Toast.makeText(this, "Number of groups must be at least 1", Toast.LENGTH_SHORT).show();
-                    return;
-                }
+                return false;
+            });
 
-                int maxGroupSize = (int) (Math.ceil((double)names.size() / numGroups));
-
-                for(int i = 1; i <= numGroups; i++){
-                    groups.put(i, new ArrayList<>());
-                }
-
-                while(!names.isEmpty()){
-                    int randomNamesNum = (int) (Math.random() * names.size());
-                    int randomGroupNum = (int) (Math.random() * numGroups) + 1;
-
-                    if(groups.get(randomGroupNum).size() < maxGroupSize){
-                        groups.get(randomGroupNum).add(names.get(randomNamesNum));
-                        names.remove(randomNamesNum);
-                    }
-                }
-
-                List<GroupItem> groupItems = new ArrayList<>();
-                for (Integer i : groups.keySet()) {
-                    groupItems.add(new GroupItem("Group " + i, groups.get(i)));
-                }
-
-                GroupAdapter adapter = new GroupAdapter(groupItems);
-                recyclerView.setAdapter(adapter);
-            }
         });
     }
 }

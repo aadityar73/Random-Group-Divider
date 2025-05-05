@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BasicCalculator">
+
+    <Button
+        android:id="@+id/nextBtn_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="9dp"
+        android:layout_marginBottom="9dp"
+        android:backgroundTint="#2196F3"
+        android:text="Next"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/prvBtn_10"
+        android:layout_width="128dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="283dp"
+        android:layout_marginBottom="14dp"
+        android:backgroundTint="#4D6779"
+        android:text="Previous"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/calcOutput"
+        android:layout_width="173dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="134dp"
+        android:layout_marginEnd="104dp"
+        android:layout_marginBottom="120dp"
+        android:text="Operation result"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/getValBtn"
+        android:layout_width="146dp"
+        android:layout_height="65dp"
+        android:layout_above="@+id/output"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="148dp"
+        android:layout_marginEnd="117dp"
+        android:layout_marginBottom="65dp"
+        android:text="Get value"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/num1"
+        android:layout_width="184dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="223dp"
+        android:layout_marginBottom="194dp"
+        android:ems="10"
+        android:hint="Enter number 1"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/num2"
+        android:layout_width="175dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="22dp"
+        android:layout_marginBottom="195dp"
+        android:ems="10"
+        android:inputType="number"
+        android:hint="Enter number 2" />
+
+    <EditText
+        android:id="@+id/operation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="97dp"
+        android:layout_marginBottom="114dp"
+        android:ems="10"
+        android:hint="Enter operation (+ - * /)"
+        android:inputType="text" />
+
+</RelativeLayout>

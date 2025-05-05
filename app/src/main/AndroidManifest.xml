@@ -13,6 +13,51 @@
         android:theme="@style/Theme.RandomGroupDivider"
         tools:targetApi="31">
         <activity
+            android:name=".SqliteDb"
+            android:exported="false" />
+        <activity
+            android:name=".UIControls_3"
+            android:exported="false" />
+        <activity
+            android:name=".UIControls_2"
+            android:exported="false" />
+        <activity
+            android:name=".UIControls_1"
+            android:exported="false" />
+        <activity
+            android:name=".ContextMenu"
+            android:exported="false" />
+        <activity
+            android:name=".StringArray"
+            android:exported="false" />
+        <activity
+            android:name=".Email"
+            android:exported="false" />
+        <activity
+            android:name=".WallpaperCall"
+            android:exported="false" />
+        <activity
+            android:name=".Session4_2"
+            android:exported="false" />
+        <activity
+            android:name=".Session4_1"
+            android:exported="false" />
+        <activity
+            android:name=".BasicCalculator"
+            android:exported="false" />
+        <activity
+            android:name=".Session2"
+            android:exported="false" />
+        <activity
+            android:name=".Session1"
+            android:exported="false" />
+        <activity
+            android:name=".NumGenerator"
+            android:exported="false" />
+        <activity
+            android:name=".GroupDivider"
+            android:exported="false" />
+        <activity
             android:name=".Output"
             android:exported="false" />
         <activity

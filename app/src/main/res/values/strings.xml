@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Random Group Divider</string>
+    <string-array name="courses">
+        <item>MCA</item>
+        <item>MBA</item>
+        <item>Bsc IT</item>
+        <item>Bcom</item>
+    </string-array>
 </resources>
