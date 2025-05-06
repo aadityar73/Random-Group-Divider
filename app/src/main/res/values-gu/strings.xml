@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">રેન્ડમ ગ્રુપ ડિવાઇડર</string>
+    <string name="name">નામ</string>
+    <string name="nameInp">આદિત્ય</string>
+    <string name="email">ઇમેઇલ સરનામું</string>
+    <string name="password">પાસવર્ડ</string>
+    <string name="emailInp">me@example.com</string>
+    <string name="passwordInp">********</string>
+    <string name="login">લૉગિન</string>
+    <string name="signup">સાઇન અપ કરો</string>
+    <string name="signup_title">તમારું એકાઉન્ટ બનાવો!</string>
+    <string name="login_title">તમારા એકાઉન્ટમાં લૉગ ઇન કરો!</string>
+    <string name="change_language">ભાષા બદલવા માટે અહીં ક્લિક કરો</string>
+    <string name="missing_fields">બધા ફીલ્ડ જરૂરી છે!</string>
+    <string name="login_success">સફળતાપૂર્વક લૉગિન થયું!</string>
+    <string name="signup_success">એકાઉન્ટ સફળતાપૂર્વક બનાવાયું!</string>
+    <string name="signup_fail">એકાઉન્ટ બનાવાઈ ન શક્યું!</string>
+    <string name="user_not_found">વપરાશકર્તા મળ્યો નહીં!</string>
+</resources>

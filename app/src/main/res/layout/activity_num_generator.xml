@@ -14,7 +14,7 @@
         android:layout_centerHorizontal="true"
         android:ems="10"
         android:inputType="number"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="80dp"
         android:hint="Number"/>
 
     <Button
@@ -37,4 +37,12 @@
         android:layout_marginTop="78dp"
         android:text="TextView"
         android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/homeBtn2"
+        android:layout_width="99dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#009688"
+        android:text="Home"
+        android:textSize="16sp" />
 </RelativeLayout>

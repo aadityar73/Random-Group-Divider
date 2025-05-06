@@ -1,5 +1,6 @@
 package com.example.randomgroupdivider;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
@@ -14,7 +15,7 @@ import androidx.core.view.WindowInsetsCompat;
 public class NumGenerator extends AppCompatActivity {
 
     EditText numInp;
-    Button generateBtn;
+    Button generateBtn, homeBtn;
     TextView outputTxt;
 
     @Override
@@ -31,6 +32,7 @@ public class NumGenerator extends AppCompatActivity {
         numInp = findViewById(R.id.numInp);
         generateBtn = findViewById(R.id.generateNumBtn);
         outputTxt = findViewById(R.id.outputTxt);
+        homeBtn = findViewById(R.id.homeBtn2);
 
         generateBtn.setOnClickListener(view -> {
             int num = Integer.parseInt(numInp.getText().toString());
@@ -38,5 +40,10 @@ public class NumGenerator extends AppCompatActivity {
 
             outputTxt.setText(String.valueOf(randomNum));
         });
+
+        homeBtn.setOnClickListener(view -> {
+            startActivity(new Intent(this, Home.class));
+        });
+
     }
 }

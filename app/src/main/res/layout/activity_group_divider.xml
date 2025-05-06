@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="80dp"
         android:background="#A32196F3"
         android:padding="6dp"
         android:text="Random Group Divider"
@@ -53,12 +53,20 @@
         android:textSize="16sp" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/groupsRecyclerView"
+        android:id="@+id/taskRecyclerView"
         android:layout_width="280dp"
         android:layout_height="422dp"
         android:layout_below="@id/assignBtn"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="24dp"
         android:padding="8dp" />
+
+    <Button
+        android:id="@+id/homeBtn"
+        android:layout_width="99dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#009688"
+        android:text="Home"
+        android:textSize="16sp" />
 
 </RelativeLayout>

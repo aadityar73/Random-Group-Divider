@@ -16,7 +16,7 @@
         android:layout_marginEnd="110dp"
         android:layout_marginBottom="455dp"
         android:ems="10"
-        android:hint="you@example.com"
+        android:hint="@string/emailInp"
         android:inputType="textEmailAddress" />
 
     <EditText
@@ -28,7 +28,7 @@
         android:layout_marginEnd="110dp"
         android:layout_marginBottom="363dp"
         android:ems="10"
-        android:hint="********"
+        android:hint="@string/passwordInp"
         android:inputType="textPassword" />
 
     <Button
@@ -40,7 +40,7 @@
         android:layout_marginEnd="173dp"
         android:layout_marginBottom="297dp"
         android:backgroundTint="#2196F3"
-        android:text="SIGN UP"
+        android:text="@string/signup"
         android:textSize="16sp" />
 
     <TextView
@@ -51,7 +51,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="72dp"
         android:layout_marginBottom="635dp"
-        android:text="CREATE YOUR ACCOUNT!"
+        android:text="@string/signup_title"
         android:textSize="24sp"
         android:textStyle="bold" />
 
@@ -63,7 +63,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="218dp"
         android:layout_marginBottom="498dp"
-        android:text="Email address"
+        android:text="@string/email"
         android:textSize="16sp" />
 
     <TextView
@@ -74,7 +74,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="248dp"
         android:layout_marginBottom="409dp"
-        android:text="Password"
+        android:text="@string/password"
         android:textSize="16sp" />
 
     <Button
@@ -86,7 +86,7 @@
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="676dp"
         android:backgroundTint="#4B4747"
-        android:text="LOG IN" />
+        android:text="@string/login" />
 
     <TextView
         android:id="@+id/textView5"
@@ -96,7 +96,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="278dp"
         android:layout_marginBottom="585dp"
-        android:text="Name"
+        android:text="@string/name"
         android:textSize="16sp" />
 
     <EditText
@@ -109,6 +109,17 @@
         android:layout_marginBottom="539dp"
         android:ems="10"
         android:inputType="text"
-        android:hint="Aaditya" />
+        android:hint="@string/nameInp" />
+
+    <Button
+        android:id="@+id/changeLanguageBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="14dp"
+        android:layout_marginBottom="12dp"
+        android:backgroundTint="#5B5858"
+        android:text="@string/change_language" />
 
 </RelativeLayout>

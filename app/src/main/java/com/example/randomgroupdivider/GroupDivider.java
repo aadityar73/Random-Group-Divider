@@ -1,9 +1,9 @@
 package com.example.randomgroupdivider;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -18,7 +18,7 @@ import java.util.*;
 
 public class GroupDivider extends AppCompatActivity {
     EditText namesInp, numGroupsInp;
-    Button assignBtn;
+    Button assignBtn, homeBtn;
     RecyclerView recyclerView;
 
     @Override
@@ -35,14 +35,19 @@ public class GroupDivider extends AppCompatActivity {
         namesInp = findViewById(R.id.namesInp);
         numGroupsInp = findViewById(R.id.numGroupsInp);
         assignBtn = findViewById(R.id.assignBtn);
+        homeBtn = findViewById(R.id.homeBtn);
 
-        recyclerView = findViewById(R.id.groupsRecyclerView);
+        homeBtn.setOnClickListener(view -> {
+            startActivity(new Intent(this, Home.class));
+        });
+
+        recyclerView = findViewById(R.id.taskRecyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         assignBtn.setOnClickListener(view -> {
 
             if(namesInp.getText().toString().isEmpty() || numGroupsInp.getText().toString().isEmpty()){
-                Toast.makeText(this, "Please fill all the fields!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, getString(R.string.missing_fields), Toast.LENGTH_SHORT).show();
             } else{
 
                 List<String> names = new ArrayList<>();

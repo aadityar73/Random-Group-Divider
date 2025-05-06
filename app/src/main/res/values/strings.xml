@@ -1,5 +1,22 @@
 <resources>
     <string name="app_name">Random Group Divider</string>
+    <string name="name">Name</string>
+    <string name="nameInp">Aaditya</string>
+    <string name="email">Email address</string>
+    <string name="password">Password</string>
+    <string name="emailInp">me@example.com</string>
+    <string name="passwordInp">********</string>
+    <string name="login">LOGIN</string>
+    <string name="signup">SIGN UP</string>
+    <string name="signup_title">CREATE YOUR ACCOUNT!</string>
+    <string name="login_title">LOG INTO YOUR ACCOUNT!</string>
+    <string name="change_language">Change Language</string>
+    <string name="missing_fields">All fields are mandatory!</string>
+    <string name="login_success">Logged in Successfully!</string>
+    <string name="signup_success">Account created successfully!</string>
+    <string name="signup_fail">Account not created!</string>
+    <string name="user_not_found">User not found!</string>
+
     <string-array name="courses">
         <item>MCA</item>
         <item>MBA</item>

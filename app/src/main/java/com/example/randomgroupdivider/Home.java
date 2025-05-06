@@ -20,7 +20,7 @@ import java.util.*;
 
 public class Home extends AppCompatActivity {
 
-    Button groupDividerBtn, numGeneratorBtn, sessionsBtn;
+    Button groupDividerBtn, numGeneratorBtn, sessionsBtn, taskAllocationBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +35,7 @@ public class Home extends AppCompatActivity {
 
         groupDividerBtn = findViewById(R.id.groupDividerBtn);
         numGeneratorBtn = findViewById(R.id.numGeneratorBtn);
+        taskAllocationBtn = findViewById(R.id.taskAllocationBtn);
         sessionsBtn = findViewById(R.id.sessionsBtn);
 
         groupDividerBtn.setOnClickListener(view -> {
@@ -45,6 +46,10 @@ public class Home extends AppCompatActivity {
         numGeneratorBtn.setOnClickListener(view -> {
             Intent numGeneratorActivity = new Intent(Home.this, NumGenerator.class);
             startActivity(numGeneratorActivity);
+        });
+
+        taskAllocationBtn.setOnClickListener(view -> {
+           startActivity(new Intent(this, TaskAllocation.class));
         });
 
         sessionsBtn.setOnClickListener(view -> {

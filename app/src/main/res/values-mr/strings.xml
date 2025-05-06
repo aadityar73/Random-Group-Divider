@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">रँडम ग्रुप डिव्हायडर</string>
+    <string name="name">नाव</string>
+    <string name="nameInp">आदित्य</string>
+    <string name="email">ईमेल पत्ता</string>
+    <string name="password">पासवर्ड</string>
+    <string name="emailInp">me@example.com</string>
+    <string name="passwordInp">********</string>
+    <string name="login">लॉगिन</string>
+    <string name="signup">साइन अप करा</string>
+    <string name="signup_title">तुमचे खाते तयार करा!</string>
+    <string name="login_title">तुमच्या खात्यात लॉग इन करा!</string>
+    <string name="change_language">भाषा बदलण्यासाठी येथे क्लिक करा</string>
+    <string name="missing_fields">सर्व फील्ड अनिवार्य आहेत!</string>
+    <string name="login_success">यशस्वीरित्या लॉगिन झाले!</string>
+    <string name="signup_success">खाते यशस्वीरित्या तयार झाले!</string>
+    <string name="signup_fail">खाते तयार झाले नाही!</string>
+    <string name="user_not_found">वापरकर्ता सापडला नाही!</string>
+</resources>
