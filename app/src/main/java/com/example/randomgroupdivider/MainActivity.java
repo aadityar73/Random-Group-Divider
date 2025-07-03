@@ -46,8 +46,8 @@ public class MainActivity extends AppCompatActivity {
 
         loginEmailInp = findViewById(R.id.signUpEmailInp);
         loginPasswordInp = findViewById(R.id.signUpPasswordInp);
-        loginBtn = findViewById(R.id.signUpBtn);
-        signUpPageBtn = findViewById(R.id.loginPage);
+        loginBtn = findViewById(R.id.loginPage);
+        signUpPageBtn = findViewById(R.id.signUpBtn);
         databaseHelper = new DatabaseHelper(this);
 
         changeLanguageBtn = findViewById(R.id.changeLanguageBtn2);
