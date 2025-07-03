@@ -36,7 +36,7 @@ public class Home extends AppCompatActivity {
         groupDividerBtn = findViewById(R.id.groupDividerBtn);
         numGeneratorBtn = findViewById(R.id.numGeneratorBtn);
         taskAllocationBtn = findViewById(R.id.taskAllocationBtn);
-        sessionsBtn = findViewById(R.id.sessionsBtn);
+//        sessionsBtn = findViewById(R.id.sessionsBtn);
 
         groupDividerBtn.setOnClickListener(view -> {
             Intent groupDividerActivity = new Intent(Home.this, GroupDivider.class);
@@ -52,56 +52,56 @@ public class Home extends AppCompatActivity {
            startActivity(new Intent(this, TaskAllocation.class));
         });
 
-        sessionsBtn.setOnClickListener(view -> {
-            PopupMenu popupMenu = new PopupMenu(Home.this, sessionsBtn);
-
-            popupMenu.getMenuInflater().inflate(R.menu.popup_menu, popupMenu.getMenu());
-            popupMenu.show();
-
-            popupMenu.setOnMenuItemClickListener(item -> {
-                int id = item.getItemId();
-
-                if (id == R.id.session_1) {
-                    startActivity(new Intent(this, Session1.class));
-                    return true;
-                } else if (id == R.id.session_2) {
-                    startActivity(new Intent(this, Session2.class));
-                    return true;
-                } else if (id == R.id.basic_calculator) {
-                    startActivity(new Intent(this, BasicCalculator.class));
-                    return true;
-                } else if (id == R.id.session_4_1) {
-                    startActivity(new Intent(this, Session4_1.class));
-                    return true;
-                } else if (id == R.id.email) {
-                    startActivity(new Intent(this, Email.class));
-                    return true;
-                } else if (id == R.id.wallpaper_call) {
-                    startActivity(new Intent(this, WallpaperCall.class));
-                    return true;
-                } else if (id == R.id.ui_controls_1) {
-                    startActivity(new Intent(this, UIControls_1.class));
-                    return true;
-                } else if (id == R.id.ui_controls_2) {
-                    startActivity(new Intent(this, UIControls_2.class));
-                    return true;
-                } else if (id == R.id.ui_controls_3) {
-                    startActivity(new Intent(this, UIControls_3.class));
-                    return true;
-                } else if (id == R.id.sqlite_db) {
-                    startActivity(new Intent(this, SqliteDb.class));
-                    return true;
-                } else if (id == R.id.string_array) {
-                    startActivity(new Intent(this, StringArray.class));
-                    return true;
-                } else if (id == R.id.context_menu) {
-                    startActivity(new Intent(this, ContextMenu.class));
-                    return true;
-                }
-
-                return false;
-            });
-
-        });
+//        sessionsBtn.setOnClickListener(view -> {
+//            PopupMenu popupMenu = new PopupMenu(Home.this, sessionsBtn);
+//
+//            popupMenu.getMenuInflater().inflate(R.menu.popup_menu, popupMenu.getMenu());
+//            popupMenu.show();
+//
+//            popupMenu.setOnMenuItemClickListener(item -> {
+//                int id = item.getItemId();
+//
+//                if (id == R.id.session_1) {
+//                    startActivity(new Intent(this, Session1.class));
+//                    return true;
+//                } else if (id == R.id.session_2) {
+//                    startActivity(new Intent(this, Session2.class));
+//                    return true;
+//                } else if (id == R.id.basic_calculator) {
+//                    startActivity(new Intent(this, BasicCalculator.class));
+//                    return true;
+//                } else if (id == R.id.session_4_1) {
+//                    startActivity(new Intent(this, Session4_1.class));
+//                    return true;
+//                } else if (id == R.id.email) {
+//                    startActivity(new Intent(this, Email.class));
+//                    return true;
+//                } else if (id == R.id.wallpaper_call) {
+//                    startActivity(new Intent(this, WallpaperCall.class));
+//                    return true;
+//                } else if (id == R.id.ui_controls_1) {
+//                    startActivity(new Intent(this, UIControls_1.class));
+//                    return true;
+//                } else if (id == R.id.ui_controls_2) {
+//                    startActivity(new Intent(this, UIControls_2.class));
+//                    return true;
+//                } else if (id == R.id.ui_controls_3) {
+//                    startActivity(new Intent(this, UIControls_3.class));
+//                    return true;
+//                } else if (id == R.id.sqlite_db) {
+//                    startActivity(new Intent(this, SqliteDb.class));
+//                    return true;
+//                } else if (id == R.id.string_array) {
+//                    startActivity(new Intent(this, StringArray.class));
+//                    return true;
+//                } else if (id == R.id.context_menu) {
+//                    startActivity(new Intent(this, ContextMenu.class));
+//                    return true;
+//                }
+//
+//                return false;
+//            });
+//
+//        });
     }
 }

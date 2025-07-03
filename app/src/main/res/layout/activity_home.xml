@@ -39,15 +39,15 @@
         android:text="Random Task Allocation"
         android:textSize="16sp" />
 
-    <Button
-        android:id="@+id/sessionsBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/taskAllocationBtn"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="8dp"
-        android:backgroundTint="#2196F3"
-        android:text="Sessions"
-        android:textSize="16sp" />
+<!--    <Button-->
+<!--        android:id="@+id/sessionsBtn"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/taskAllocationBtn"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_marginTop="8dp"-->
+<!--        android:backgroundTint="#2196F3"-->
+<!--        android:text="Sessions"-->
+<!--        android:textSize="16sp" />-->
 
 </RelativeLayout>
